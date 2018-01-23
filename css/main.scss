@@ -1,0 +1,261 @@
+.brand-logo {
+    margin-left: 20px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+nav {
+    background-color: #07657e !important;
+    z-index: 9999;
+}
+.title {
+    font-size: 24px;
+}
+
+.searchbar {
+    // background: #ffffff;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // margin: 0 auto;
+    min-width: 300px;
+    // border: solid 1px #003a49;
+    // padding: 5px;
+    // margin-right: 20px;
+    color: #ffffff ;
+    // border-radius: 5px;
+    // position: relative;
+}
+
+
+.subheader{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.minheader {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-top: 7px;
+}
+
+section {
+    display: flex;
+    flex-flow: nowrap;
+    flex-direction: row;
+}
+
+
+.main {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: none;
+}
+
+
+.sidenav {
+    position: sticky;
+    flex: 1 0 256px;
+}
+
+.mainContent{
+  flex: 1 0 auto;
+}
+
+.description {
+    flex: 1 0 500px;
+    min-width: 60%;
+}
+
+.codeView {
+    flex: 1 0 500px;
+    min-width: 40%; 
+}
+
+.menuWrapper {
+    padding: 70px 10px 30px 10px !important;
+    overflow-y: scroll;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(247, 247, 249);
+    transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    box-sizing: border-box;
+    font-family: inherit;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    border-radius: 0px;
+    height: 100%;
+    width: 256px;
+    position: fixed;
+    z-index: 1200;
+    left: 0px;
+    top: 0px;
+}
+
+
+@media screen and (max-width:990px) {
+    .main {
+        display: flex;
+        flex-flow: nowrap;
+        justify-content: space-between;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.header {
+    padding-top: 40px;
+}
+
+
+
+.item{
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+.fa {
+    color: #4caf50;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.active, a:hover {
+     color: #07657e;
+     font-weight: bold;
+ }
+.codeView {
+    margin: 0;
+    background: #003a49;
+    color: #ffffff;
+    padding: 10px 20px 30px 20px !important;
+    z-index: 0;
+
+}
+
+.apiImage {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.subheader2{
+    font-size: 22px;
+    text-transform: bold;
+    padding: 10px 0px 0px 0px;
+    color: #4caf50;
+}
+
+.subheader3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  padding-top: 20px;
+
+}
+
+.subheader4 {
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.subheader5 {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.subheaderContent {
+    margin-bottom: 10px;
+}
+
+.mainContent .stepItem {
+    font-size: 20px;
+    text-transform: bold;
+    color: #4caf50;
+}
+
+.mainContent .stepContent {
+    text-align: left;
+    font-size: 13px;
+
+}
+
+.description {
+    padding: 30px 40px 30px 40px;
+    width: 100%;
+
+}
+
+.method {
+    font-size: 10px;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #003a49;
+    border-radius: 3px;
+}
+
+.code {
+    padding: 10px;
+    background-color: #042a3c;
+    color: #d3d3d3;
+}
+
+.codeView h6 {
+    color: #d3d3d3;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+
+.divider {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    background-color: #042a3c !important;
+    position: relative;
+    width: 100%;
+}
+
+table {
+    margin-bottom: 20px;
+}
+
+.languagetab {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding-top: 20px;
+  border-bottom: 1px solid #636060;
+
+}
+
+.language {
+   padding-bottom: 10px;
+   text-align: center;
+   color: #d3d3d3;
+   font-size: 14px;
+   text-transform: uppercase;
+   flex: 1 1 auto;
+   border-right: 1px solid #636060;
+}
+
+.language a:hover {
+    color: #ffffff;
+}
+
+.language a.active {
+    padding-bottom: 10px;
+    width: webkit-fill-available;
+    border-bottom: 3px solid #4caf50;
+    color: #ffffff;
+}

@@ -1,0 +1,587 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/main.scss">
+      <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>VigiPay API Documentation</title>
+    </head>
+
+    <body>
+
+      <!-- Start Header -->
+        <div class="navbar-fixed">
+          <nav class="navbar-home">
+            <div class="nav-wrapper ">
+                <a href="#" data-activates="nav-mobile" class="button-collapse hide-on-large"><i class="material-icons">menu</i></a>
+               
+              <a href="#!" class="brand-logo">  
+                <img src="images/logo1.png" alt="VigiPay" class="hide-on-med-and-down"/>
+              </a>
+              <ul class="hide-on-med-and-down right">               
+                  <li>    
+                     <div class="center row">
+                        <div class="col s12" >
+                          <div class="row" id="topbarsearch">
+                            <div class="input-field searchbar">
+                              <i class="grey-text material-icons prefix">search</i>
+                              <input type="text" placeholder="What are you looking for?" id="autocomplete-input" class="autocomplete" >
+                              </div>
+                            </div>
+                          </div>
+                        </div>          
+                    </li>                     
+              </ul>
+              <div class="title center flow-text">API DOCUMENTATION</div>       
+            </div>
+          </nav>
+        </div>
+        <ul id="nav-mobile" class="side-nav">
+                <li class="subheader" ><span><i class="fa fa-files-o"></i></span><a href="#"> Getting Started</a></li>
+              <li class="subheader" ><span><i class="fa fa-chain"></i></span><a href="#"> Api</a></li>
+              <ul>
+              <li class="minheader">Organisation
+                <ul class="minItems">
+                  <li class="item"><a href="#contact" class="active">Contact</a></li>
+                  <li class="item"><a href="#">Corporate Account</a></li>
+                  <li class="item"><a href="#">Corporate Role Permissions</a></li>
+                  <li class="item"><a href="#">Corporate Role</a></li>
+                  <li class="item"><a href="#">Corporate Role User</a></li>
+                  <li class="item"><a href="#">Corporate</a></li>
+                  <li class="item"><a href="#">Corporate User</a></li>
+                  <li class="item"><a href="#">Customer(Client)</a></li>
+                </ul>  
+              </li>
+              <li class="minheader">Invoicing
+                  <ul>
+                    <li class="item"><a href="#">Adjustment Item</a></li>
+                    <li class="item"><a href="#">Adjustment PROFILE</a></li>
+                    <li class="item"><a href="#">Bank</a></li>
+                    <li class="item"><a href="#">Charge Item</a></li>
+                    <li class="item"><a href="#">Charge Profile</a></li>
+                    <li class="item"><a href="#">Corporate Memo</a></li>
+                    <li class="item"><a href="#">Corporate Request</a></li>
+                    <li class="item"><a href="#">Currency</a></li>
+                    <li class="item"><a href="#">Invoice</a></li>
+                    <li class="item"><a href="#">Location</a></li>
+                    <li class="item"><a href="#">Mandate</a></li>
+                    <li class="item"><a href="#">Payment Channel Charge</a></li>
+                    <li class="item"><a href="#">Payment Channel</a></li>
+                    <li class="item"><a href="#">Payment</a></li>
+                    <li class="item"><a href="#">Rate</a></li>
+                    <li class="item"><a href="#">Remmittance</a></li>
+                    <li class="item"><a href="#">Report</a></li>
+                    <li class="item"><a href="#">Revenue</a></li>
+                    <li class="item"><a href="#">Subscriber</a></li>
+                    <li class="item"><a href="#">Wallet</a></li>
+                  </ul>
+              </li>
+              <li class="minheader">Payment
+                  <ul>
+                    <li class="item"><a href="#">Bank</a></li>
+                    <li class="item"><a href="#">Corporate Memo</a></li>
+                    <li class="item"><a href="#">Corporate Request</a></li>
+                    <li class="item"><a href="#">Mandate</a></li>
+                    <li class="item"><a href="#">Payment Channel</a></li>
+                    <li class="item"><a href="#">Payment</a></li>
+                    <li class="item"><a href="#">Report</a></li>
+                    <li class="item"><a href="#">Revenue</a></li>
+                    <li class="item"><a href="#">Subscriber</a></li>
+                    <li class="item"><a href="#">Wallet</a></li>
+                  </ul>  
+                </li>
+                <li class="minheader">Payouts
+                    <ul>
+                      <li class="item"><a href="#">Bank</a></li>
+                      <li class="item"><a href="#">Corporate Memo</a></li>
+                      <li class="item"><a href="#">Corporate Request</a></li>
+                      <li class="item"><a href="#">Mandate</a></li>
+                      <li class="item"><a href="#">Payout Item</a></li>
+                      <li class="item"><a href="#">Payout</a></li>
+                      <li class="item"><a href="#">Report</a></li>
+                      <li class="item"><a href="#">Wallet</a></li>
+                    </ul>  
+                  </li>
+                  <li class="minheader">Settlement
+                      <ul>
+                        <li class="item"><a href="#">Bank</a></li>
+                        <li class="item"><a href="#">Corporate Account</a></li>
+                        <li class="item"><a href="#">Payout Item</a></li>
+                        <li class="item"><a href="#">Payout</a></li>
+                      </ul>  
+                </li> 
+                <li class="minheader">Others
+                    <ul>
+                      <li class="item"><a href="#">Bank</a></li>
+                      <li class="item"><a href="#">BVN</a></li>
+                      <li class="item"><a href="#">Country</a></li>
+                      <li class="item"><a href="#">Currency</a></li>
+                      <li class="item"><a href="#">Fiscal Year</a></li>
+                      <li class="item"><a href="#">Industry</a></li>
+                      <li class="item"><a href="#">Permissions</a></li>
+                    </ul>  
+                </li>  
+            </ul>
+            <li class="subheader"><span><i class="fa fa-book"></i></span><a href="#"> Support</a></li>
+            <li class="subheader"><span><i class="fa fa-question-circle-o"></i></span><a href="#"> Help</a></li>
+          </ul>
+          
+        <!-- End Header -->
+        
+         <!-- Start Sidebar -->
+        
+           <!-- End Sidebar -->
+           <div class="main">
+             <div  data-radium="true" class="sidenav hide-on-med-and-down">
+              
+                <div class="overflow-scrollbars menuWrapper">
+                      <ul>
+                          <li class="subheader" ><span><i class="fa fa-files-o"></i></span><a href="#"> Getting Started</a></li>
+                        <li class="subheader" ><span><i class="fa fa-chain"></i></span><a href="#"> Api</a></li>
+                        <ul>
+                        <li class="minheader">Organisation
+                          <ul class="minItems">
+                            <li class="item"><a href="#contact" class="active">Contact</a></li>
+                            <li class="item"><a href="#">Corporate Account</a></li>
+                            <li class="item"><a href="#">Corporate Role Permissions</a></li>
+                            <li class="item"><a href="#">Corporate Role</a></li>
+                            <li class="item"><a href="#">Corporate Role User</a></li>
+                            <li class="item"><a href="#">Corporate</a></li>
+                            <li class="item"><a href="#">Corporate User</a></li>
+                            <li class="item"><a href="#">Customer(Client)</a></li>
+                          </ul>  
+                        </li>
+                        <li class="minheader">Invoicing
+                            <ul>
+                              <li class="item"><a href="#">Adjustment Item</a></li>
+                              <li class="item"><a href="#">Adjustment PROFILE</a></li>
+                              <li class="item"><a href="#">Bank</a></li>
+                              <li class="item"><a href="#">Charge Item</a></li>
+                              <li class="item"><a href="#">Charge Profile</a></li>
+                              <li class="item"><a href="#">Corporate Memo</a></li>
+                              <li class="item"><a href="#">Corporate Request</a></li>
+                              <li class="item"><a href="#">Currency</a></li>
+                              <li class="item"><a href="#">Invoice</a></li>
+                              <li class="item"><a href="#">Location</a></li>
+                              <li class="item"><a href="#">Mandate</a></li>
+                              <li class="item"><a href="#">Payment Channel Charge</a></li>
+                              <li class="item"><a href="#">Payment Channel</a></li>
+                              <li class="item"><a href="#">Payment</a></li>
+                              <li class="item"><a href="#">Rate</a></li>
+                              <li class="item"><a href="#">Remmittance</a></li>
+                              <li class="item"><a href="#">Report</a></li>
+                              <li class="item"><a href="#">Revenue</a></li>
+                              <li class="item"><a href="#">Subscriber</a></li>
+                              <li class="item"><a href="#">Wallet</a></li>
+                            </ul>
+                        </li>
+                        <li class="minheader">Payment
+                            <ul>
+                              <li class="item"><a href="#">Bank</a></li>
+                              <li class="item"><a href="#">Corporate Memo</a></li>
+                              <li class="item"><a href="#">Corporate Request</a></li>
+                              <li class="item"><a href="#">Mandate</a></li>
+                              <li class="item"><a href="#">Payment Channel</a></li>
+                              <li class="item"><a href="#">Payment</a></li>
+                              <li class="item"><a href="#">Report</a></li>
+                              <li class="item"><a href="#">Revenue</a></li>
+                              <li class="item"><a href="#">Subscriber</a></li>
+                              <li class="item"><a href="#">Wallet</a></li>
+                            </ul>  
+                          </li>
+                          <li class="minheader">Payouts
+                              <ul>
+                                <li class="item"><a href="#">Bank</a></li>
+                                <li class="item"><a href="#">Corporate Memo</a></li>
+                                <li class="item"><a href="#">Corporate Request</a></li>
+                                <li class="item"><a href="#">Mandate</a></li>
+                                <li class="item"><a href="#">Payout Item</a></li>
+                                <li class="item"><a href="#">Payout</a></li>
+                                <li class="item"><a href="#">Report</a></li>
+                                <li class="item"><a href="#">Wallet</a></li>
+                              </ul>  
+                            </li>
+                            <li class="minheader">Settlement
+                                <ul>
+                                  <li class="item"><a href="#">Bank</a></li>
+                                  <li class="item"><a href="#">Corporate Account</a></li>
+                                  <li class="item"><a href="#">Payout Item</a></li>
+                                  <li class="item"><a href="#">Payout</a></li>
+                                </ul>  
+                          </li> 
+                          <li class="minheader">Others
+                              <ul>
+                                <li class="item"><a href="#">Bank</a></li>
+                                <li class="item"><a href="#">BVN</a></li>
+                                <li class="item"><a href="#">Country</a></li>
+                                <li class="item"><a href="#">Currency</a></li>
+                                <li class="item"><a href="#">Fiscal Year</a></li>
+                                <li class="item"><a href="#">Industry</a></li>
+                                <li class="item"><a href="#">Permissions</a></li>
+                              </ul>  
+                          </li>  
+                      </ul>
+                      <li class="subheader"><span><i class="fa fa-book"></i></span><a href="#"> Support</a></li>
+                      <li class="subheader"><span><i class="fa fa-question-circle-o"></i></span><a href="#"> Help</a></li>
+                    </ul>
+                    
+                </div>
+             </div>
+         
+             <div>
+               <div class="mainContent">
+                  <section data-radium="true" id="introduction">
+                    <div class="description" data-radium="true">
+                    <h4 class="header center">Getting Started</h4>
+                    <p>Welcome to VigiPay! the developer center for integrating your business with us.
+                       Get familiar with our tools and products by using the information below.</p>
+                    <img class="apiImage" src="images/apisteps.png" alt="API Steps" />
+                   <div class="row">
+                      <div class="col s12 m6 l3">
+                          <div class="stepitem">1.</div>
+                          <div class="stepContent">Create an account on VigiPay. To create an account you need your email address, company name, first name and last name</div>
+                      </div>
+                      <div class="col s12 m6 l3">
+                         <div class="stepitem">2.</div>
+                         <div class="stepContent">Setup your account by updating your business information, customize your settings such as invoice, adjustment profile, settlement profile and create your customer.</div>
+                      </div>
+                      <div class="col s12 m6 l3">
+                         <div class="stepitem">3.</div>
+                         <div class="stepContent">Go to the API page and select APIs.</div>
+                      </div>
+                      <div class="col s12 m6 l3">
+                        <div class="stepitem">4.</div>
+                        <div class="stepContent">Waiting....</div>
+                      </div>
+                   </div>
+                   <div class="subheader2">Overview</div>
+                   <div class="subheaderContent">VigiPay was designed to serve unlimited number of customers with diverse requirements fundamentally 
+                     solving issues around invoicing, payments, settlements and reconciliations. Our solution is simple to use, flexible and robust.
+                      Here you will find detailed information about our APIs and how to them. If you have questions or comments, kindly leave us a message
+                     support@vigipay.co
+                   </div>
+                   <div class="subheader2">Get Started</div>
+                   <div class="subheaderContent">Before you start to plug any of our APIs into your expert system, you will need to create an
+                    account with us, do some basic account set up and provide us with your callback URL through our API request from. Providing a callback 
+                    URL for each of your expert system is a precondition for consuming our APIs. We will be required to validate who you are after agreeing 
+                    to our terms and conditions. After these things are in place, you are welcome to endless opportunities on VigiPay.
+                  </div>
+                  <div class="subheader2">What you need to sign up on VigiPay</div>
+                  <ul>
+                    <li>Visit VigiPay’s website https://gateway.vigipay.co</a></li>
+                    <li>Click on the Sign Up button</a></li>
+                    <li>Fill the signup form with your business email address</a></li>
+                    <li>An email will be sent to you requesting you to validate your email</a></li>
+                    <li>Click on the validation link in your email</a></li>
+                    <li>After we validate your email, you will be redirected to a form to complete your signup process</a></li>
+                    <liAfter you must have completed the signup process, you will be redirected to a sign in page></a></li>
+                    <li>Sign in with your correct login details to gain access to your VigiPay account.</a></li>
+                  </ul>
+                  <div class="subheader2">How to set up your VigiPay account</div>
+                  <ul>
+                    <li>If you are signing in for the first time, a setup process is required</a></li>
+                    <li> You will need to fill basic information about your business such as your business name, RC number, Tax ID, your basic 
+                      currency and your address</a></li>
+                    <li>You will also need to upload your business logo</a></li>
+                    <li>Anytime you perform a transaction, there is a transaction charge, you will need to tell us who should bear this transaction charge. You can decide either you or your customer will bear this charge – we call this your Charge Profile
+                      </a></li>
+                    <li>We understand that while raising an invoice to your customer, you might need to include some deductibles and inclusions such as discounts and VAT, you will need to inform us by setting VAT as default – we call this your Adjustment Profile
+                      </a></li>
+                    <li>You will need to link at least one account number to your VigiPay account. This will be your default account where all your revenues will be collected. We have a provision for you to add multiple bank accounts and split your revenue as you wish – this can be done in the Settlement Profile
+                      </a></li>
+                    <li>You will be required to give all the above profiles a general name which we call a Revenue Line</a></li>
+                    <li>The final step allows you to create your first customer. You will need to enter both business details of your customer and add the contact details of who you interface with in their business
+                      </a></li>
+                    <li>After doing the above, you have successfully completed setting up your account on VigiPay.</a></li>
+                  </ul>
+
+                  <div class="subheader2">Request API Access</div>
+                 Before you can create an invoice, make payments or use any of VigiPay’s services, you will need to request for API access. The 
+                 steps below will guide you through the process of gaining access to the APIs:
+                 <ul>
+                   <li>Once the user has signed in, the user clicks on API Documentation</a></li>
+                   <li>You will be able to see the list of all expert systems you have integrated VigiPay with</a></li>
+                   <li>You will be required to fill the API request form with the following details:
+                     <ul>
+                       <li>URL - The full URL of the your application that will call VigiPay API</a></li>
+                       <li>IP Address - The IP Address of your application that will call VigiPay API</a></li>
+                       <li>Callback URL- Call back URL on your website that receives HTTP POST. This is required for VigiPay to send notifications to your expert system.</a></li>
+                     </ul>
+                   </a></li>
+                   <li>VigiPay will approve your request</a></li>
+                   <li>You will gain access to a list of APIs</a></li>
+                   <li>You can then consume the required APIs</a></li>
+                   <li>At this stage, VigiPay will assign an account manager to you who will be in charge of monitoring your portfolio on VigiPay.</a></li>
+                 </ul>
+
+                </div>
+                <div data-radium="true" class="codeView hide-on-med-and-down">
+                  <div class="languagetab">
+                    <div class="language"><a href="#">SHELL</a></div>
+                    <div class="language"><a href="#" class="active">Javascript</a></div>
+                    <div class="language"><a href="#">C#</a></div>
+                    <div class="language"><a href="#">Python</a></div>
+                    <div class="language" style="border-right: none"><a href="#">Java</a></div>
+                  </div>
+                </div>
+                  </section>
+                    <section id="contact">
+                      <div data-radium="true" class="description">
+                        <h4 class="header center">Contact API</h4>
+                        <div class="subheader2">1. Create the specified model
+                          <span class="method">POST</span>
+                        </div>
+                        <div class="subheader3">Request Information</div>
+                        <div class="subheader4"><b>URI Parameters</b></div>
+                        <div class="subheader5">Resource Description:  <b>None</b></div>
+
+                        <div class="subheader4"><b>Body Parameters</b></div>
+                        <div class="subheader5">Resource Description:  <b>ContactModel</b></div>
+                        <table class="bordered">
+                          <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Additional Information</th>
+                          </tr>
+                          <tr>
+                            <td>Id</td>
+                            <td>Gets or sets the identifier</td>
+                            <td>Integer</td>
+                            <td>None</td>
+                          </tr>
+                          <tr>
+                            <td>Firstname</td>
+                            <td>Gets or sets the firstname</td>
+                            <td>String</td>
+                            <td>Required</td>
+                          </tr>
+                          <tr>
+                            <td>Lastname</td>
+                            <td>Gets or sets the lastname</td>
+                            <td>String</td>
+                            <td>Required</td>
+                          </tr>
+                          <tr>
+                              <td>TitleId</td>
+                              <td>Gets or sets the title identifier</td>
+                              <td>Integer</td>
+                              <td>Required. Range: inclusive between 1 and 100000</td>
+                            </tr>
+                          <tr>
+                            <td>DisplayName</td>
+                            <td>Gets or sets the display name</td>
+                            <td>String</td>
+                            <td>Required</td>
+                          </tr>
+                        </table>
+                        <div class="subheader3">Response Information</div>
+                        <div class="subheader5">Resource Description:  <b>IHttpActionResult</b></div>
+                        
+                     </div>
+                     <div data-radium="true" class="codeView s12">
+                      <div class="divider hide-on-med-and-down"></div>
+                       <div class="definition">
+                         <h6>Definition</h6>
+                         <div class="code">POST  api/Contacts/Create</div>
+                       </div>
+                       <div class="format">
+                         <h6>Request Format </h6>
+                         <div class="code">application/json, text/json</div>
+                       </div>
+                       <div class="sample">
+                          <h6>Request Sample </h6>
+                          <div class="code">
+                            <code>
+                              { <br/>
+                                   "Id": 1,<br/>
+                                   "FirstName": "sample string 2",<br/>
+                                   "LastName": "sample string 3",<br/>
+                                   "TitleId": 4,<br/>
+                                   "DisplayName": "sample string 5",<br/>
+                                   "Phone": "sample string 6",<br/>
+                                   "Email": "sample string 7",<br/>
+                                   "CustomerId": 8,<br/>
+                                   "text": "sample string 5"<br/>
+                                 }
+                            </code>
+                            </div>
+                        </div>
+                        <div class="format">
+                            <h6>Response Format </h6>
+                            <div class="code">application/json, text/json</div>
+                          </div>
+                          <div class="sample">
+                             <h6>Response Sample </h6>
+                             <div class="code">
+                               <code>
+                                 { <br/>
+                                   "Id": 1,<br/>
+                                   "FirstName": "sample string 2",<br/>
+                                   "LastName": "sample string 3",<br/>
+                                   "TitleId": 4,<br/>
+                                   "DisplayName": "sample string 5",<br/>
+                                   "Phone": "sample string 6",<br/>
+                                   "Email": "sample string 7",<br/>
+                                   "CustomerId": 8,<br/>
+                                   "text": "sample string 5"<br/>
+                                 }
+                               </code>
+                               </div>
+                           </div>
+
+                     </div>
+                     
+                    </section>
+                    <section>
+                        <div data-radium="true" class="description">
+                          <div class="subheader2">2. Create the specified model
+                            <span class="method">POST</span>
+                          </div>
+                          <div class="subheader3">Request Information</div>
+                          <div class="subheader4"><b>URI Parameters</b></div>
+                          <div class="subheader5">Resource Description:  <b>None</b></div>
+  
+                          <div class="subheader4"><b>Body Parameters</b></div>
+                          <div class="subheader5">Resource Description:  <b>ContactModel</b></div>
+                          <table class="bordered">
+                            <tr>
+                              <th>Name</th>
+                              <th>Description</th>
+                              <th>Type</th>
+                              <th>Additional Information</th>
+                            </tr>
+                            <tr>
+                              <td>Id</td>
+                              <td>Gets or sets the identifier</td>
+                              <td>Integer</td>
+                              <td>None</td>
+                            </tr>
+                            <tr>
+                              <td>Firstname</td>
+                              <td>Gets or sets the firstname</td>
+                              <td>String</td>
+                              <td>Required</td>
+                            </tr>
+                            <tr>
+                              <td>Lastname</td>
+                              <td>Gets or sets the lastname</td>
+                              <td>String</td>
+                              <td>Required</td>
+                            </tr>
+                            <tr>
+                                <td>TitleId</td>
+                                <td>Gets or sets the title identifier</td>
+                                <td>Integer</td>
+                                <td>Required. Range: inclusive between 1 and 100000</td>
+                              </tr>
+                            <tr>
+                              <td>DisplayName</td>
+                              <td>Gets or sets the display name</td>
+                              <td>String</td>
+                              <td>Required</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>Gets or sets the email</td>
+                                <td>String</td>
+                                <td>Required</td>
+                              </tr>
+                              <tr>
+                                  <td>Phone</td>
+                                  <td>Gets or sets the display phone</td>
+                                  <td>String</td>
+                                  <td>Required</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer Id</td>
+                                    <td>Gets or sets the customer identifier</td>
+                                    <td>Integer</td>
+                                    <td>Range: inclusive between 1 and 100000000000</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Text</td>
+                                      <td>Gets the text</td>
+                                      <td>String</td>
+                                      <td>Required</td>
+                                    </tr>
+                          </table>
+                          <div class="subheader3">Response Information</div>
+                          <div class="subheader5">Resource Description:  <b>IHttpActionResult</b></div>
+                          
+                       </div>
+                       <div data-radium="true" class="codeView">
+                         <div class="definition">
+                           <h6>Definition</h6>
+                           <div class="code">POST  api/Contacts/Create</div>
+                         </div>
+                         <div class="format">
+                           <h6>Request Format </h6>
+                           <div class="code">application/json, text/json</div>
+                         </div>
+                         <div class="sample">
+                            <h6>Request Sample </h6>
+                            <div class="code">
+                              <code>
+                                { <br/>
+                                     "Id": 1,<br/>
+                                     "FirstName": "sample string 2",<br/>
+                                     "LastName": "sample string 3",<br/>
+                                     "TitleId": 4,<br/>
+                                     "DisplayName": "sample string 5",<br/>
+                                     "Phone": "sample string 6",<br/>
+                                     "Email": "sample string 7",<br/>
+                                     "CustomerId": 8,<br/>
+                                     "text": "sample string 5"<br/>
+                                   }
+                              </code>
+                              </div>
+                          </div>
+                          <div class="format">
+                              <h6>Response Format </h6>
+                              <div class="code">application/json, text/json</div>
+                            </div>
+                            <div class="sample">
+                               <h6>Response Sample </h6>
+                               <div class="code">
+                                 <code>
+                                   { <br/>
+                                     "Id": 1,<br/>
+                                     "FirstName": "sample string 2",<br/>
+                                     "LastName": "sample string 3",<br/>
+                                     "TitleId": 4,<br/>
+                                     "DisplayName": "sample string 5",<br/>
+                                     "Phone": "sample string 6",<br/>
+                                     "Email": "sample string 7",<br/>
+                                     "CustomerId": 8,<br/>
+                                     "text": "sample string 5"<br/>
+                                   }
+                                 </code>
+                                 </div>
+                                </div>
+                       </div>               
+                      </section>
+               </div>
+              </div>
+    
+           </div>
+
+            <!-- End Header -->
+      
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+       <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script>
+        $('.button-collapse').sideNav();
+      </script>
+    
+ 
+    </body>
+  </html>
